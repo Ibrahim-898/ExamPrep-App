@@ -1,0 +1,22 @@
+[
+  {"question":"What is C programming language?","answer":"A procedural programming language developed in the 1970s."},
+  {"question":"What is a pointer?","answer":"A variable that stores memory address of another variable."},
+  {"question":"What is the use of the 'printf' function?","answer":"To output text to the console."},
+  {"question":"What is a variable?","answer":"A named storage in memory to hold data."},
+  {"question":"What is a function?","answer":"A block of code that performs a specific task."},
+  {"question":"What is the difference between '==' and '='?","answer":"'==' is comparison; '=' is assignment."},
+  {"question":"What is an array?","answer":"A collection of elements of the same type stored contiguously."},
+  {"question":"What is a structure in C?","answer":"A user-defined data type grouping variables under one name."},
+  {"question":"What is the use of 'return' statement?","answer":"To exit from a function and optionally return a value."},
+  {"question":"What is a loop?","answer":"A control structure to repeat code multiple times."},
+  {"question":"Name three loops in C.","answer":"for, while, do-while."},
+  {"question":"What is a header file?","answer":"A file containing declarations used by multiple source files."},
+  {"question":"What is the main function?","answer":"The entry point of a C program."},
+  {"question":"What is recursion in C?","answer":"A function calling itself."},
+  {"question":"What is a null pointer?","answer":"A pointer that points to nothing (address zero)."},
+  {"question":"What is dynamic memory allocation?","answer":"Allocating memory at runtime using malloc, calloc, etc."},
+  {"question":"What is the difference between malloc and calloc?","answer":"malloc allocates memory uninitialized; calloc initializes to zero."},
+  {"question":"What is a compiler?","answer":"A program that translates source code to machine code."},
+  {"question":"What is a segmentation fault?","answer":"An error caused by accessing invalid memory."},
+  {"question":"What is the use of 'const' keyword?","answer":"To declare variables whose value cannot be changed."}
+]

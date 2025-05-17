@@ -1,0 +1,22 @@
+[
+  {"question":"What is system design?","answer":"Process of defining architecture, modules, and interfaces of a system."},
+  {"question":"What is scalability?","answer":"Ability of a system to handle increased load."},
+  {"question":"What is load balancing?","answer":"Distributing traffic evenly across servers."},
+  {"question":"What is a database index?","answer":"A data structure to speed up data retrieval."},
+  {"question":"What is caching?","answer":"Storing data temporarily for faster access."},
+  {"question":"What is a microservice?","answer":"An independent, modular service in a larger system."},
+  {"question":"What is CAP theorem?","answer":"Consistency, Availability, and Partition tolerance — only two can be guaranteed at once."},
+  {"question":"What is eventual consistency?","answer":"Data will become consistent over time, not immediately."},
+  {"question":"What is a message queue?","answer":"A system that allows asynchronous communication between components."},
+  {"question":"What is database sharding?","answer":"Splitting a database into smaller parts to improve performance."},
+  {"question":"What is a REST API?","answer":"An architectural style for designing networked applications."},
+  {"question":"What is latency?","answer":"The delay before data transfer begins following an instruction."},
+  {"question":"What is fault tolerance?","answer":"Ability of a system to continue operation despite failures."},
+  {"question":"What is a CDN?","answer":"Content Delivery Network used to deliver content faster to users."},
+  {"question":"What is horizontal scaling?","answer":"Adding more machines to handle load."},
+  {"question":"What is vertical scaling?","answer":"Adding more resources (CPU, RAM) to an existing machine."},
+  {"question":"What is a monolithic architecture?","answer":"A single unified software application."},
+  {"question":"What is high availability?","answer":"Systems designed to be operational continuously."},
+  {"question":"What is a circuit breaker pattern?","answer":"A design pattern to prevent cascading failures."},
+  {"question":"What is API rate limiting?","answer":"Restricting the number of API requests from a client."}
+]

@@ -1,0 +1,409 @@
+[
+  {
+    "question": "Which of the following is the first step in the system development life cycle (SDLC)?",
+    "options": [
+      "System design",
+      "Feasibility study",
+      "System analysis",
+      "Problem identification"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does DFD stand for?",
+    "options": [
+      "Data Function Diagram",
+      "Data Flow Design",
+      "Data Flow Diagram",
+      "Design Flow Diagram"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which model is also known as the linear sequential model?",
+    "options": [
+      "Waterfall model",
+      "RAD model",
+      "Agile model",
+      "Spiral model"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "What is the primary purpose of a feasibility study?",
+    "options": [
+      "To analyze hardware requirements",
+      "To check if the project is technically and economically viable",
+      "To write source code",
+      "To test the software"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following is NOT a type of feasibility?",
+    "options": [
+      "Technical feasibility",
+      "Economic feasibility",
+      "Organizational feasibility",
+      "Hardware feasibility"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "Which diagram shows the interaction between system components over time?",
+    "options": [
+      "Class diagram",
+      "Activity diagram",
+      "Sequence diagram",
+      "Use-case diagram"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "In software engineering, cohesion refers to:",
+    "options": [
+      "Interdependence between modules",
+      "Strength of relationship within a module",
+      "Data transfer between systems",
+      "Coupling of software classes"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which phase involves converting requirements into system design?",
+    "options": [
+      "Implementation",
+      "Analysis",
+      "Testing",
+      "Design"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "A use-case diagram is used to:",
+    "options": [
+      "Show code structure",
+      "Show how system behaves for user interaction",
+      "Depict system hardware",
+      "Analyze database tables"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "What does SRS stand for?",
+    "options": [
+      "Software Requirement Study",
+      "System Requirement Specification",
+      "Software Requirement Specification",
+      "System Report Specification"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Who is responsible for converting requirements into software specifications?",
+    "options": [
+      "Tester",
+      "System Analyst",
+      "Programmer",
+      "User"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which is NOT a characteristic of good software?",
+    "options": [
+      "Maintainability",
+      "Efficiency",
+      "Complexity",
+      "Usability"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which type of testing is done without knowledge of the internal structure?",
+    "options": [
+      "White-box testing",
+      "Unit testing",
+      "Black-box testing",
+      "Module testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is a prototype?",
+    "options": [
+      "Final version of software",
+      "Temporary working model",
+      "User manual",
+      "Test plan"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is a type of maintenance?",
+    "options": [
+      "Preventive",
+      "Corrective",
+      "Perfective",
+      "All of the above"
+    ],
+    "answer": 3
+  },
+  {
+    "question": "What does CASE stand for?",
+    "options": [
+      "Computer Aided Software Engineering",
+      "Computer Architecture Software Engineering",
+      "Central Analysis of Software Elements",
+      "Code Analysis and Software Evaluation"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "The spiral model combines features of:",
+    "options": [
+      "Waterfall and V-Model",
+      "Agile and Prototype",
+      "Waterfall and Prototype",
+      "RAD and Spiral"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is a static modeling tool?",
+    "options": [
+      "Sequence diagram",
+      "Use-case diagram",
+      "Class diagram",
+      "Activity diagram"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which document specifies what the software must do?",
+    "options": [
+      "Design Document",
+      "Test Plan",
+      "Requirement Specification",
+      "Deployment Plan"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What is coupling in software design?",
+    "options": [
+      "Degree of independence of modules",
+      "Time complexity of code",
+      "Interaction between user and system",
+      "Measure of software speed"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which testing verifies the individual units of code?",
+    "options": [
+      "System testing",
+      "Integration testing",
+      "Unit testing",
+      "Acceptance testing"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "What does UML stand for?",
+    "options": [
+      "Unified Modeling Language",
+      "Uniform Method Logic",
+      "Unified Method Library",
+      "Universal Modeling Layout"
+    ],
+    "answer": 0
+  },
+  {
+    "question": "Which SDLC model requires customer interaction throughout development?",
+    "options": [
+      "Waterfall",
+      "Agile",
+      "V-Model",
+      "Spiral"
+    ],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is not an SDLC model?",
+    "options": [
+      "Agile",
+      "Waterfall",
+      "Plan-Do-Check",
+      "Spiral"
+    ],
+    "answer": 2
+  },
+  {
+    "question": "Which software metric measures size of the software?",
+    "options": [
+      "LOC",
+      "Cyclomatic Complexity",
+      "Reliability",
+      "Functionality"
+    ],
+    "answer": 0
+  },
+  
+  {
+    "question": "Which data structure uses LIFO (Last In First Out) principle?",
+    "options": ["Queue", "Stack", "Array", "Linked List"],
+    "answer": 1
+  },
+  {
+    "question": "What is the time complexity of binary search in a sorted array?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(1)"],
+    "answer": 1
+  },
+  {
+    "question": "Which of the following data structures is non-linear?",
+    "options": ["Array", "Linked List", "Stack", "Tree"],
+    "answer": 3
+  },
+  {
+    "question": "Which traversal method is used in Depth First Search of a tree?",
+    "options": ["Inorder", "Preorder", "Postorder", "All of the above"],
+    "answer": 3
+  },
+  {
+    "question": "Which data structure is best for implementing a priority queue?",
+    "options": ["Stack", "Queue", "Heap", "Array"],
+    "answer": 2
+  },
+  {
+    "question": "What is the worst-case time complexity of quicksort?",
+    "options": ["O(n)", "O(n log n)", "O(n^2)", "O(log n)"],
+    "answer": 2
+  },
+  {
+    "question": "Which algorithm is used to find the shortest path in a graph?",
+    "options": ["DFS", "BFS", "Dijkstra's Algorithm", "Prim's Algorithm"],
+    "answer": 2
+  },
+  {
+    "question": "Which data structure allows insertion and deletion at both ends?",
+    "options": ["Queue", "Deque", "Stack", "Linked List"],
+    "answer": 1
+  },
+  {
+    "question": "Which sorting algorithm is the most efficient on average?",
+    "options": ["Bubble sort", "Insertion sort", "Quick sort", "Selection sort"],
+    "answer": 2
+  },
+  {
+    "question": "A full binary tree with 7 nodes has how many leaf nodes?",
+    "options": ["3", "4", "5", "6"],
+    "answer": 1
+  },
+  {
+    "question": "What does a hash function do in a hash table?",
+    "options": ["Sorts data", "Searches data", "Maps keys to indexes", "Deletes data"],
+    "answer": 2
+  },
+  {
+    "question": "What is the maximum number of children a binary tree node can have?",
+    "options": ["1", "2", "3", "Any number"],
+    "answer": 1
+  },
+  {
+    "question": "Which traversal gives sorted order in a binary search tree?",
+    "options": ["Preorder", "Postorder", "Inorder", "Level order"],
+    "answer": 2
+  },
+  {
+    "question": "Which data structure is used in recursion?",
+    "options": ["Queue", "Stack", "Array", "Heap"],
+    "answer": 1
+  },
+  {
+    "question": "Which algorithm is used in minimum spanning tree problems?",
+    "options": ["Dijkstra", "DFS", "Kruskal", "Bellman-Ford"],
+    "answer": 2
+  },
+  {
+    "question": "Which of the following is not a stable sorting algorithm?",
+    "options": ["Merge sort", "Quick sort", "Insertion sort", "Bubble sort"],
+    "answer": 1
+  },
+  {
+    "question": "Which data structure is used in BFS traversal?",
+    "options": ["Stack", "Queue", "Heap", "Tree"],
+    "answer": 1
+  },
+  {
+    "question": "What is the height of a complete binary tree with 15 nodes?",
+    "options": ["3", "4", "5", "6"],
+    "answer": 1
+  },
+  {
+    "question": "Which operation is used to add a node to the end of a linked list?",
+    "options": ["Push", "Append", "Insert", "Enqueue"],
+    "answer": 1
+  },
+  {
+    "question": "What is the time complexity of insertion in a max-heap?",
+    "options": ["O(1)", "O(log n)", "O(n)", "O(n log n)"],
+    "answer": 1
+  },
+  {
+    "question": "Which of these is not a linear data structure?",
+    "options": ["Stack", "Queue", "Tree", "Array"],
+    "answer": 2
+  },
+  {
+    "question": "What is the time complexity of merge sort?",
+    "options": ["O(n)", "O(log n)", "O(n log n)", "O(n^2)"],
+    "answer": 2
+  },
+  {
+    "question": "Which tree has maximum height?",
+    "options": ["Complete tree", "Full tree", "Skewed tree", "Balanced tree"],
+    "answer": 2
+  },
+  {
+    "question": "Which search algorithm uses a divide and conquer approach?",
+    "options": ["Linear search", "Binary search", "BFS", "DFS"],
+    "answer": 1
+  },
+  {
+    "question": "Which data structure is most suitable for implementing LRU cache?",
+    "options": ["HashMap", "Stack", "Queue", "Deque"],
+    "answer": 3
+  },
+  {
+    "question": "What is the average time complexity of searching in a hash table?",
+    "options": ["O(n)", "O(log n)", "O(1)", "O(n log n)"],
+    "answer": 2
+  },
+  {
+    "question": "Which algorithm divides input into two halves and sorts recursively?",
+    "options": ["Bubble Sort", "Quick Sort", "Merge Sort", "Selection Sort"],
+    "answer": 2
+  },
+  {
+    "question": "Which data structure helps in implementing undo operation?",
+    "options": ["Queue", "Stack", "Deque", "Linked List"],
+    "answer": 1
+  },
+  {
+    "question": "Which graph algorithm detects cycles in a graph?",
+    "options": ["Prim's", "Dijkstra's", "Kruskal's", "DFS"],
+    "answer": 3
+  },
+  {
+    "question": "Which of the following is true about adjacency matrix of graph?",
+    "options": [
+      "Takes O(n^2) space",
+      "Takes O(n) space",
+      "Takes O(log n) space",
+      "Takes O(1) space"
+    ],
+    "answer": 0
+  }
+]
+

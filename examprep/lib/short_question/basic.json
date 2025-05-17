@@ -1,0 +1,22 @@
+[
+  {"question":"What is an IP address?","answer":"A unique identifier for a device on a network."},
+  {"question":"What is DNS?","answer":"Domain Name System translates domain names to IP addresses."},
+  {"question":"What is HTTP?","answer":"HyperText Transfer Protocol for communication on the web."},
+  {"question":"What is cloud computing?","answer":"Delivery of computing services over the internet."},
+  {"question":"What is a firewall?","answer":"A security system that monitors and controls network traffic."},
+  {"question":"What is an operating system?","answer":"Software managing hardware and software resources."},
+  {"question":"What is virtualization?","answer":"Creating virtual versions of hardware or OS."},
+  {"question":"What is malware?","answer":"Malicious software designed to harm or exploit systems."},
+  {"question":"What is phishing?","answer":"Fraudulent attempt to obtain sensitive information."},
+  {"question":"What is a VPN?","answer":"Virtual Private Network for secure network connections."},
+  {"question":"What is HTTPS?","answer":"Secure version of HTTP using encryption."},
+  {"question":"What is two-factor authentication?","answer":"Security process requiring two forms of identity verification."},
+  {"question":"What is a server?","answer":"A computer providing services to other computers on a network."},
+  {"question":"What is bandwidth?","answer":"The maximum data transfer rate of a network."},
+  {"question":"What is latency in networking?","answer":"Delay in data transmission over a network."},
+  {"question":"What is a database?","answer":"An organized collection of data."},
+  {"question":"What is SaaS?","answer":"Software as a Service delivered online."},
+  {"question":"What is backup?","answer":"Copying data to prevent loss."},
+  {"question":"What is encryption?","answer":"Process of converting data into a secure format."},
+  {"question":"What is a cookie?","answer":"Data stored by websites on user browsers for tracking."}
+]

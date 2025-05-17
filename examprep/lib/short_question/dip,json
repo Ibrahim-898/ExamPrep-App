@@ -1,0 +1,22 @@
+[
+  {"question":"What is Digital Image Processing?","answer":"Manipulating digital images using computers."},
+  {"question":"Define pixel.","answer":"Smallest unit of a digital image representing color."},
+  {"question":"What is histogram equalization?","answer":"Technique to improve image contrast by spreading intensity values."},
+  {"question":"What is spatial filtering?","answer":"Applying a mask to enhance or detect features in an image."},
+  {"question":"What is edge detection?","answer":"Finding areas with sharp intensity changes."},
+  {"question":"What is a color model?","answer":"Mathematical way to represent colors, like RGB or CMYK."},
+  {"question":"Define image segmentation.","answer":"Dividing an image into meaningful regions."},
+  {"question":"What is noise in an image?","answer":"Unwanted random variations of brightness or color."},
+  {"question":"Name a common image compression technique.","answer":"JPEG compression."},
+  {"question":"What does a convolution operation do?","answer":"It applies a filter to extract features from an image."},
+  {"question":"What is thresholding?","answer":"Converting an image to binary by setting a threshold."},
+  {"question":"What is image enhancement?","answer":"Improving image quality for better visualization."},
+  {"question":"Define morphological operations.","answer":"Techniques that process images based on shapes."},
+  {"question":"What is the role of Fourier Transform in DIP?","answer":"It analyzes the frequency components of an image."},
+  {"question":"What is color quantization?","answer":"Reducing the number of colors in an image."},
+  {"question":"What is image restoration?","answer":"Removing degradation from an image to recover the original."},
+  {"question":"What is aliasing?","answer":"Distortion when sampling frequency is insufficient."},
+  {"question":"What is a kernel in DIP?","answer":"A matrix used for filtering operations."},
+  {"question":"What is the difference between lossy and lossless compression?","answer":"Lossy reduces quality for smaller size; lossless preserves quality."},
+  {"question":"What is an ROI (Region of Interest)?","answer":"A selected portion of an image for further processing."}
+]

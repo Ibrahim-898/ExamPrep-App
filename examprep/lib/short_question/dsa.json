@@ -1,0 +1,22 @@
+[
+  {"question":"What is an algorithm?","answer":"A step-by-step procedure to solve a problem."},
+  {"question":"Define data structure.","answer":"A way to organize and store data efficiently."},
+  {"question":"What is a linked list?","answer":"A collection of nodes where each node points to the next."},
+  {"question":"What is a stack?","answer":"A LIFO data structure, last-in, first-out."},
+  {"question":"What is a queue?","answer":"A FIFO data structure, first-in, first-out."},
+  {"question":"What is binary search?","answer":"An efficient search algorithm on sorted arrays."},
+  {"question":"What is a hash table?","answer":"A data structure that maps keys to values for fast lookup."},
+  {"question":"What is recursion?","answer":"A function calling itself to solve smaller instances."},
+  {"question":"Define time complexity.","answer":"A measure of algorithm's running time relative to input size."},
+  {"question":"What is a tree?","answer":"A hierarchical data structure with nodes connected by edges."},
+  {"question":"What is a binary tree?","answer":"A tree where each node has up to two children."},
+  {"question":"What is a graph?","answer":"A collection of nodes connected by edges."},
+  {"question":"What is depth-first search (DFS)?","answer":"An algorithm that explores as far as possible along branches."},
+  {"question":"What is breadth-first search (BFS)?","answer":"An algorithm that explores neighbors level by level."},
+  {"question":"What is a sorting algorithm?","answer":"An algorithm that arranges elements in order."},
+  {"question":"Name a simple sorting algorithm.","answer":"Bubble sort."},
+  {"question":"What is dynamic programming?","answer":"A method for solving problems by combining solutions to subproblems."},
+  {"question":"What is the difference between array and linked list?","answer":"Array has fixed size and contiguous memory; linked list is dynamic and uses pointers."},
+  {"question":"What is a priority queue?","answer":"A queue where each element has a priority."},
+  {"question":"What is Big O notation?","answer":"A notation to describe the upper bound of an algorithm’s time complexity."}
+]
