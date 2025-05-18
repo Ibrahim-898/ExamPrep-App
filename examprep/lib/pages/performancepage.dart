@@ -7,10 +7,10 @@ class PerformancePage extends StatelessWidget {
   Widget build(BuildContext context) {
     // This would come from your database in a real app
     final examResults = [
-      {'subject': 'Mathematics', 'score': 85, 'date': '2023-05-15', 'total': 100},
-      {'subject': 'Physics', 'score': 78, 'date': '2023-06-20', 'total': 100},
-      {'subject': 'Chemistry', 'score': 92, 'date': '2023-07-10', 'total': 100},
-      {'subject': 'Biology', 'score': 65, 'date': '2023-08-05', 'total': 100},
+      {'subject': 'DIP', 'score': 85, 'date': '2023-05-15', 'total': 100},
+      {'subject': 'DSA', 'score': 78, 'date': '2023-06-20', 'total': 100},
+      {'subject': 'C Programming', 'score': 92, 'date': '2023-07-10', 'total': 100},
+      {'subject': 'JAVA', 'score': 65, 'date': '2023-08-05', 'total': 100},
     ];
 
     return Scaffold(

@@ -1,10 +1,14 @@
+
 // import 'dart:async';
+// import 'package:examprep/pages/performancepage.dart';
+// import 'package:examprep/pages/profilepage.dart';
 // import 'package:flutter/material.dart';
 // import 'package:examprep/Auth/auth_service.dart';
 // import 'package:examprep/pages/QuickRevision.dart';
 // import 'package:examprep/pages/Question_bank.dart';
 // import 'package:examprep/pages/Routine.dart';
 // import 'package:examprep/pages/live_exam_page.dart';
+
 
 // class Homepage extends StatefulWidget {
 //   const Homepage({super.key});
@@ -15,14 +19,15 @@
 
 // class _HomepageState extends State<Homepage> {
 //   final authService = AuthService();
+//   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
 
 //   final List<String> motivationalMessages = [
 //     "Stay focused and keep pushing! Your hard work will pay off.",
 //     "Every day is a new opportunity to learn something new.",
 //     "Believe in yourself and all that you are.",
 //     "Success is the sum of small efforts repeated day in and day out.",
-//     "Don’t watch the clock; do what it does. Keep going.",
-//     "Your limitation—it’s only your imagination.",
+//     "Don't watch the clock; do what it does. Keep going.",
+//     "Your limitation—it's only your imagination.",
 //   ];
 
 //   final List<Color> cardColors = [
@@ -77,15 +82,22 @@
 //     ];
 
 //     return Scaffold(
+//       key: _scaffoldKey, // Add key here
 //       appBar: AppBar(
 //         backgroundColor: const Color.fromARGB(255, 82, 181, 206),
-//         leading: IconButton(onPressed: () {}, icon: const Icon(Icons.menu)),
+//         leading: IconButton(
+//           onPressed: () {
+//             _scaffoldKey.currentState?.openDrawer(); // Use the key to open drawer
+//           }, 
+//           icon: const Icon(Icons.menu)
+//         ),
 //         centerTitle: true,
 //         title: const Text("ExamPrep"),
 //         actions: [
 //           IconButton(onPressed: logout, icon: const Icon(Icons.logout)),
 //         ],
 //       ),
+//       drawer: buildDrawer(context),
 //       body: Padding(
 //         padding: const EdgeInsets.all(16),
 //         child: Column(
@@ -179,6 +191,73 @@
 //     );
 //   }
 
+//   Widget buildDrawer(BuildContext context) {
+//     return Drawer(
+//       child: ListView(
+//         padding: EdgeInsets.zero,
+//         children: [
+//           DrawerHeader(
+//             decoration: BoxDecoration(
+//               color: const Color.fromARGB(255, 82, 181, 206),
+//             ),
+//             child: Column(
+//               crossAxisAlignment: CrossAxisAlignment.start,
+//               mainAxisAlignment: MainAxisAlignment.end,
+//               children: [
+//                 CircleAvatar(
+//                   radius: 30,
+//                   backgroundColor: Colors.white,
+//                   child: Icon(Icons.person, size: 40, color: Colors.grey),
+//                 ),
+//                 const SizedBox(height: 10),
+//                 const Text(
+//                   'User Name',
+//                   style: TextStyle(
+//                     color: Colors.white,
+//                     fontSize: 18,
+//                     fontWeight: FontWeight.bold,
+//                   ),
+//                 ),
+//                 const Text(
+//                   'user@example.com',
+//                   style: TextStyle(
+//                     color: Colors.white70,
+//                     fontSize: 14,
+//                   ),
+//                 ),
+//               ],
+//             ),
+//           ),
+//           ListTile(
+//             leading: const Icon(Icons.person),
+//             title: const Text('Profile'),
+//             onTap: () {
+//               Navigator.pop(context);
+//               Navigator.push(context, MaterialPageRoute(builder: (_) => ProfilePage()));
+//             },
+//           ),
+//           ListTile(
+//             leading: const Icon(Icons.assessment),
+//             title: const Text('Performance'),
+//             onTap: () {
+//               Navigator.pop(context);
+//               Navigator.push(context, MaterialPageRoute(builder: (_) => PerformancePage()));
+//             },
+//           ),
+//           const Divider(),
+//           ListTile(
+//             leading: const Icon(Icons.settings),
+//             title: const Text('Settings'),
+//             onTap: () {
+//               Navigator.pop(context);
+//               // Add settings navigation here
+//             },
+//           ),
+//         ],
+//       ),
+//     );
+//   }
+
 //   Widget buildGridItem(BuildContext context, IconData icon, String label, Color color) {
 //     return Material(
 //       color: Colors.transparent,
@@ -232,7 +311,6 @@ import 'package:examprep/pages/Question_bank.dart';
 import 'package:examprep/pages/Routine.dart';
 import 'package:examprep/pages/live_exam_page.dart';
 
-
 class Homepage extends StatefulWidget {
   const Homepage({super.key});
 
@@ -241,8 +319,10 @@ class Homepage extends StatefulWidget {
 }
 
 class _HomepageState extends State<Homepage> {
-  final authService = AuthService();
+  final AuthService _authService = AuthService();
   final GlobalKey<ScaffoldState> _scaffoldKey = GlobalKey<ScaffoldState>();
+  Map<String, dynamic>? _userProfile;
+  bool _isProfileLoading = true;
 
   final List<String> motivationalMessages = [
     "Stay focused and keep pushing! Your hard work will pay off.",
@@ -269,6 +349,7 @@ class _HomepageState extends State<Homepage> {
   @override
   void initState() {
     super.initState();
+    _loadUserProfile();
     _timer = Timer.periodic(const Duration(seconds: 3), (Timer timer) {
       if (_currentPage < motivationalMessages.length - 1) {
         _currentPage++;
@@ -290,8 +371,27 @@ class _HomepageState extends State<Homepage> {
     super.dispose();
   }
 
+  Future<void> _loadUserProfile() async {
+    try {
+      final profile = await _authService.getProfile();
+      if (mounted) {
+        setState(() {
+          _userProfile = profile;
+          _isProfileLoading = false;
+        });
+      }
+    } catch (e) {
+      if (mounted) {
+        setState(() => _isProfileLoading = false);
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to load profile: ${e.toString()}')),
+        );
+      }
+    }
+  }
+
   void logout() async {
-    await authService.signOut();
+    await _authService.signOut();
   }
 
   @override
@@ -305,22 +405,24 @@ class _HomepageState extends State<Homepage> {
     ];
 
     return Scaffold(
-      key: _scaffoldKey, // Add key here
+      key: _scaffoldKey,
       appBar: AppBar(
         backgroundColor: const Color.fromARGB(255, 82, 181, 206),
         leading: IconButton(
-          onPressed: () {
-            _scaffoldKey.currentState?.openDrawer(); // Use the key to open drawer
-          }, 
-          icon: const Icon(Icons.menu)
+          onPressed: () => _scaffoldKey.currentState?.openDrawer(),
+          icon: const Icon(Icons.menu),
         ),
         centerTitle: true,
         title: const Text("ExamPrep"),
         actions: [
-          IconButton(onPressed: logout, icon: const Icon(Icons.logout)),
+          IconButton(
+            onPressed: logout,
+            icon: const Icon(Icons.logout),
+            tooltip: 'Logout',
+          ),
         ],
       ),
-      drawer: buildDrawer(context),
+      drawer: _buildDrawer(context),
       body: Padding(
         padding: const EdgeInsets.all(16),
         child: Column(
@@ -373,15 +475,21 @@ class _HomepageState extends State<Homepage> {
                 crossAxisSpacing: 16,
                 mainAxisSpacing: 16,
                 children: List.generate(4, (index) {
-                  return buildGridItem(context, icons[index], labels[index], cardColors[index]);
+                  return _buildGridItem(
+                    context, 
+                    icons[index], 
+                    labels[index], 
+                    cardColors[index]
+                  );
                 }),
               ),
             ),
             const SizedBox(height: 20),
             GestureDetector(
-              onTap: () {
-                Navigator.push(context, MaterialPageRoute(builder: (_) => ExamScreen()));
-              },
+              onTap: () => Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (_) => const ExamScreen()),
+              ),
               child: Container(
                 width: double.infinity,
                 padding: const EdgeInsets.symmetric(vertical: 16),
@@ -414,7 +522,7 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
-  Widget buildDrawer(BuildContext context) {
+  Widget _buildDrawer(BuildContext context) {
     return Drawer(
       child: ListView(
         padding: EdgeInsets.zero,
@@ -430,20 +538,28 @@ class _HomepageState extends State<Homepage> {
                 CircleAvatar(
                   radius: 30,
                   backgroundColor: Colors.white,
-                  child: Icon(Icons.person, size: 40, color: Colors.grey),
+                  child: Icon(
+                    Icons.person, 
+                    size: 40, 
+                    color: Colors.grey,
+                  ),
                 ),
                 const SizedBox(height: 10),
-                const Text(
-                  'User Name',
-                  style: TextStyle(
+                Text(
+                  _isProfileLoading 
+                    ? 'Loading...' 
+                    : _userProfile?['name'] ?? 'No name',
+                  style: const TextStyle(
                     color: Colors.white,
                     fontSize: 18,
                     fontWeight: FontWeight.bold,
                   ),
                 ),
-                const Text(
-                  'user@example.com',
-                  style: TextStyle(
+                Text(
+                  _isProfileLoading
+                    ? 'loading...'
+                    : _userProfile?['email'] ?? 'No email',
+                  style: const TextStyle(
                     color: Colors.white70,
                     fontSize: 14,
                   ),
@@ -456,7 +572,10 @@ class _HomepageState extends State<Homepage> {
             title: const Text('Profile'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (_) => ProfilePage()));
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (_) => const ProfilePage()),
+              );
             },
           ),
           ListTile(
@@ -464,7 +583,10 @@ class _HomepageState extends State<Homepage> {
             title: const Text('Performance'),
             onTap: () {
               Navigator.pop(context);
-              Navigator.push(context, MaterialPageRoute(builder: (_) => PerformancePage()));
+              Navigator.push(
+                context, 
+                MaterialPageRoute(builder: (_) => const PerformancePage()),
+              );
             },
           ),
           const Divider(),
@@ -481,17 +603,26 @@ class _HomepageState extends State<Homepage> {
     );
   }
 
-  Widget buildGridItem(BuildContext context, IconData icon, String label, Color color) {
+  Widget _buildGridItem(BuildContext context, IconData icon, String label, Color color) {
     return Material(
       color: Colors.transparent,
       child: InkWell(
         onTap: () {
           if (label == "Question Bank") {
-            Navigator.push(context, MaterialPageRoute(builder: (_) => QuestionBank()));
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (_) => const QuestionBank()),
+            );
           } else if (label == "Routine") {
-            Navigator.push(context, MaterialPageRoute(builder: (_) => Routine()));
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (_) => const ExamRoutinePage()),
+            );
           } else if (label == "Quick Revision") {
-            Navigator.push(context, MaterialPageRoute(builder: (_) => QuickRevision()));
+            Navigator.push(
+              context, 
+              MaterialPageRoute(builder: (_) => const QuickRevision()),
+            );
           }
         },
         borderRadius: BorderRadius.circular(12),
